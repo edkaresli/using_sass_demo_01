@@ -1,0 +1,84 @@
+
+.navbar   
+  background-color: $navbar_background_color
+  position: fixed 
+  width: 100%
+  top: 0px
+  height: 60px 
+  z-index: 100 
+  input[type=checkbox]
+    position: absolute 
+    top: -9999px
+    left: -9999px 
+  label
+    display: none 
+    cursor: pointer
+    user-select: none
+  ul 
+    float: right 
+    vertical-align: middle   
+    margin-top: 20px    
+    li                
+      display: inline 
+      list-style-type: none            
+      vertical-align: middle 
+      margin-right: 20px
+    a
+      text-decoration: none
+      color: $navbar_color 
+      font-size: 18px      
+    a:hover 
+      color: #ffffff
+
+@media only screen and (max-width: 724px)   
+  html, body 
+    margin: 0px 
+    padding: 0px
+  .navbar 
+    position: static   
+    z-index: auto                             
+    label        
+      display: block
+      position: fixed 
+      top: 20px
+      right: 20px         
+      color: #ffffff       
+      &:after  
+        margin-left: 10px
+        color: #ffffff 
+        content: "\2261"
+        font-size: 1.8em 
+        clear: both
+        display: block 
+    ul              
+      width: 100%
+      margin: 0px
+      background-color: $navbar_background_color
+      li           
+        text-align: center   
+        margin-left: 0
+        margin-right: 0                                     
+        a            
+          text-decoration: none
+          padding: 10px  
+          cursor: pointer 
+          border-bottom: solid 1px #555555
+      
+    input[type=checkbox]:checked ~ label:after
+      color: #555555
+                         
+  .showMenu    
+    height: auto   
+    display: block     
+    li        
+      display: block 
+      a 
+        display: block 
+        
+  .hideMenu 
+    height: 0px 
+    li 
+      display: none 
+      a 
+        display: none 
+    

@@ -1,0 +1,144 @@
+
+.photo
+  div
+    position: relative
+    height: 400px
+    background-image: url("..\\img\\photo_01.jpeg") 
+    background-repeat: no-repeat 
+    background-size: auto 
+    background-origin: border-box
+    overflow: hidden 
+    background-color: #cccccc 
+    h3 
+      position: relative 
+      top: 130px
+      text-align: center
+      font-size: 40px
+      margin: 0
+      width: 100%
+      color: #ffffff
+  &:after
+    clear: both 
+    content: ""
+    display: block 
+    
+@media only screen and (max-width: 724px) 
+  .photo
+    display: none    
+
+.first
+  +set_color($sec_1_color, $sec_1_background) 
+  width: 100% 
+  padding: 10px
+  text-align: center 
+  h2
+    margin: 10px
+  h4 
+    margin-top: 20px 
+  div
+    vertical-align: middle
+    margin: auto
+  .subscribe
+    margin: 1%
+
+@media only screen and (max-width: 724px)
+  .first
+    margin-top: auto 
+    height: auto 
+    opacity: 1
+  
+  input[type=checkbox]:checked ~ section[class="first"] 
+    opacity: 0
+  
+.second
+  div 
+    float: right 
+    width: 29%
+    margin: 1%
+    padding: 1%
+    +set_color($sec_2_color, #eeeeee) 
+    h4 
+      margin-bottom: 6px      
+  &:after
+    content: ""
+    display: block
+    clear: both 
+
+@media only screen and (max-width: 724px)
+  .second
+    div
+      float: none 
+      width: 96%
+      margin: 1%
+      padding: 1%
+
+
+.third
+  +set_color($sec_1_background, #dddddd)
+  padding: 5px
+  margin-left: 10px
+  margin-right: 10px
+  margin-bottom: 10px
+  +borderradius(20px)
+  div    
+    margin: 4px
+    border: solid 1px white 
+    +borderradius(20px) 
+    &:nth-child(odd)
+      +set_color(#ffffff, #707887)       
+    &:nth-child(even)
+      +set_color(#ffffff, #5c5d60)
+    h5 
+      margin-left: 2% 
+      margin-top: 5px
+    p 
+      -webkit-column-count: 2
+      column-count: 2
+      margin: 6px
+
+@media only screen and (max-width: 724px)
+  .third
+    div
+      p 
+        -webkit-column-count: 1
+        column-count: 1
+
+.fourth
+  +set_color($sec_4_color, $sec_4_background_color)
+  width: 98%
+  margin-left: 1%
+  margin-right: 1%
+  margin-bottom: 20px
+  +borderradius(10px) 
+  div
+    position: relative 
+    width: 98%
+    margin: 20px 1%
+    padding: 10px 0px
+    +borderradius(10px) 
+    border: solid 1px white 
+    text-align: center
+    box-shadow: 5px 10px 8px #333333                  
+    &:hover
+      background-color: #dddddd
+      color: #222222
+      cursor: pointer
+    &:active
+      outline: none
+      top: 2px
+      left: -2px
+      box-shadow: -2px 2px 0 #dddddd
+       
+.hidden 
+  display: none 
+  position: absolute 
+  max-height: 0
+  top: -100px
+  transition: top 1000ms ease-in 0.1    
+    
+.shown 
+  display: block 
+  top: 100px 
+  max-height: 200px   
+  transition: top 1000ms ease-out 0.1
+  overflow: hidden

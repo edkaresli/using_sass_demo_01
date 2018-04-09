@@ -1,0 +1,27 @@
+.logo    
+  float: left
+  margin-left: 20px
+  color: $logo_color
+  vertical-align: middle
+  &:hover
+    color: #ffffff
+    font-weight: bold
+    cursor: pointer
+  &:leave
+    color: $logo_color
+    font-weight: normal
+    
+@media only screen and (max-width: 724px)
+  .logo
+    float: none 
+    display: block 
+    margin-left: auto 
+    margin-right: auto 
+    text-align: center 
+
+// width: 18%
+// height: 180px
+// .logo:after
+//  content: ""
+//  display: block 
+//  clear: both
